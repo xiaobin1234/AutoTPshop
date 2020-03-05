@@ -1,4 +1,5 @@
 #导包
+import os
 import unittest
 import time
 from HTMLTestRunner_PY3 import HTMLTestRunner
@@ -19,7 +20,7 @@ suite.addTest(unittest.makeSuite(TestOrderPay))
 
 # 创建测试报告文件
 # filename = './report/test_report_{}.html'.format(time.strftime("%Y%m%d%H%M%S"))
-filename = './report/test_report.html'
+filename = os.path.dirname(os.path.abspath(__file__)) + './report/test_report.html'
 # 打开测试报告文件
 with open(filename, 'wb') as f:
     runner = HTMLTestRunner(stream=f, title="tpshop", description="win7- Chrome7.8")
