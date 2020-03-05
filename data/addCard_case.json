@@ -1,0 +1,6 @@
+{
+  "search_add_card_success":{
+    "search_kw":"apple",
+    "expect":"添加成功"
+  }
+}
